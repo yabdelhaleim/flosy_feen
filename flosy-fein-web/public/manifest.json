@@ -1,0 +1,22 @@
+{
+  "name": "فلوسي فين؟ - اعرف فلوسك قبل ما تروح",
+  "short_name": "فلوسي فين",
+  "description": "تطبيق مالي ذكي لإدارة المصروفات ومتابعة الأقساط الشهرية بهوية مصرية حديثة",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5F6F7",
+  "theme_color": "#064C3B",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

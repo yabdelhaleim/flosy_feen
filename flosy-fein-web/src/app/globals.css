@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --primary-green: #064C3B;
+  --secondary-green: #0B6650;
+  --primary-orange: #FF6B16;
+  --orange-hover: #E55A0A;
+  --bg-light: #F5F6F7;
+  --card-white: #FFFFFF;
+  --text-dark: #17221F;
+  --text-muted: #7C8581;
+  --border-subtle: #E8ECEB;
+  --border-active: #064C3B;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* الكروت البيضاء النظيفة بالظلال الخفيفة الناعمة */
+.fintech-clean-card {
+  background: #FFFFFF;
+  border: 1px solid #EAECEB;
+  box-shadow: 0 2px 8px -2px rgba(6, 76, 59, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+  border-radius: 1.25rem;
+}
+
+/* كارت الرصيد الأخضر الداكن الأيقوني */
+.hero-balance-card {
+  background: linear-gradient(145deg, #064C3B 0%, #085542 50%, #0B6650 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 30px -6px rgba(6, 76, 59, 0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+/* زر الإجراء الأساسي البرتقالي المميز */
+.btn-primary-orange {
+  background-color: #FF6B16;
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 18px -4px rgba(255, 107, 22, 0.4);
+}
+.btn-primary-orange:hover {
+  background-color: #E55A0A;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px -4px rgba(255, 107, 22, 0.5);
+}
+.btn-primary-orange:active {
+  transform: translateY(1px);
+}
+
+/* حقول الإدخال النظيفة */
+.clean-input {
+  background: #FFFFFF;
+  border: 1.5px solid #E2E6E5;
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+  color: #17221F;
+}
+.clean-input:focus {
+  outline: none;
+  border-color: #064C3B;
+  box-shadow: 0 0 0 3px rgba(6, 76, 59, 0.1);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

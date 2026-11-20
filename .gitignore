@@ -1,0 +1,24 @@
+# Dependencies
+**/node_modules/
+**/vendor/
+
+# Next.js build
+flosy-fein-web/.next/
+flosy-fein-web/out/
+flosy-fein-web/build/
+
+# Environment variables
+**/.env
+**/.env.*
+!**/.env.example
+
+# Laravel storage logs and keys
+flosy-fein-api/storage/*.key
+flosy-fein-api/storage/logs/*.log
+flosy-fein-api/storage/framework/cache/*
+flosy-fein-api/storage/framework/sessions/*
+flosy-fein-api/storage/framework/views/*
+
+# OS generated files
+.DS_Store
+Thumbs.db
