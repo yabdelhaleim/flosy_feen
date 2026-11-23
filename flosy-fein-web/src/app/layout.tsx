@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import BottomNav from "@/components/BottomNav";
 import PhoneMockupWrapper from "@/components/PhoneMockupWrapper";
+import OnboardingSlider from "@/components/OnboardingSlider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -58,8 +59,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen bg-[#E5E9E8] text-[#17221F] antialiased" suppressHydrationWarning>
+      <body className="min-h-screen bg-[#043328] text-[#17221F] antialiased" suppressHydrationWarning>
         <PhoneMockupWrapper>
+          <OnboardingSlider />
           {children}
           <BottomNav />
         </PhoneMockupWrapper>

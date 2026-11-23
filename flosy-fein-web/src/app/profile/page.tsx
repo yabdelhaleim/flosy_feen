@@ -233,6 +233,19 @@ export default function ProfilePage() {
           </p>
         </div>
 
+        {/* زر عرض التعليمات والإعلانات الترحيبية */}
+        <button
+          onClick={() => {
+            if (typeof window !== "undefined" && (window as any).showFlosyOnboarding) {
+              (window as any).showFlosyOnboarding();
+            }
+          }}
+          className="w-full bg-[#064C3B]/10 hover:bg-[#064C3B]/20 text-[#064C3B] border border-[#064C3B]/20 py-3 rounded-2xl text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-xs"
+        >
+          <Sparkles className="w-4 h-4 text-[#FF6B16]" />
+          <span>عرض تعليمات التطبيق والإعلانات الترحيبية 💡</span>
+        </button>
+
         {/* 5. زر تسجيل الخروج الأنيق */}
         <button
           onClick={handleLogout}
