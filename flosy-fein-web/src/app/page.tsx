@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { dashboardApi, getUser, profileApi } from "@/lib/api";
 import {
@@ -109,9 +110,17 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center p-6 text-[#7C8581] min-h-[500px]">
-        <div className="w-10 h-10 border-3 border-[#064C3B] border-t-[#FF6B16] rounded-full animate-spin mb-3"></div>
-        <p className="text-xs font-semibold">جاري تحميل البيانات...</p>
+      <div className="flex-1 flex flex-col items-center justify-center p-6 min-h-[500px] select-none">
+        <Image
+          src="/logo.jpg"
+          alt="فلوسي فين؟"
+          width={120}
+          height={120}
+          className="w-28 h-28 rounded-3xl object-contain drop-shadow-xl mb-5 animate-pulse"
+          priority
+        />
+        <div className="w-8 h-8 border-3 border-[#064C3B] border-t-[#FF6B16] rounded-full animate-spin mb-3"></div>
+        <p className="text-sm font-extrabold text-[#064C3B]">جاري تحميل فلوسك...</p>
       </div>
     );
   }
