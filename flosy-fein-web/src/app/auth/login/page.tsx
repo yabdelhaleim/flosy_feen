@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { authApi } from "@/lib/api";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
@@ -66,47 +67,21 @@ export default function LoginPage() {
 
       {/* ── المحتوى الرئيسي المتمركز ── */}
       <div className="relative z-10 flex flex-col items-center flex-1 justify-center max-w-sm mx-auto w-full">
-        {/* اللوجو المطابق للصورة المرجعية - حجم أكبر وأوضح */}
-        <div className="flex flex-col items-center mb-6">
-          <div className="relative inline-block text-center">
-            {/* الأشعة البرتقالية الـ 3 المشعة فوق كلمة فلوسي */}
-            <svg
-              width="44"
-              height="26"
-              viewBox="0 0 36 22"
-              fill="none"
-              className="absolute -top-5 -right-2"
-            >
-              <line x1="6" y1="18" x2="1" y2="6" stroke="#FF6B16" strokeWidth="3.4" strokeLinecap="round" />
-              <line x1="18" y1="19" x2="18" y2="3" stroke="#FF6B16" strokeWidth="3.6" strokeLinecap="round" />
-              <line x1="30" y1="18" x2="35" y2="6" stroke="#FF6B16" strokeWidth="3.4" strokeLinecap="round" />
-            </svg>
-
-            {/* كلمة فلوسي بالأخضر الغامق */}
-            <h1 className="text-6xl font-black text-[#064C3B] tracking-tight leading-none" style={{ letterSpacing: "-1px" }}>
-              فلوسى
-            </h1>
-
-            {/* كلمة فين بالبرتقالي الزاهي */}
-            <div className="text-6xl font-black text-[#FF6B16] tracking-tight leading-tight -mt-2" style={{ letterSpacing: "-1px" }}>
-              فين؟
-            </div>
-
-            {/* القوس الموجي البرتقالي تحت كلمة فين؟ */}
-            <div className="w-32 mx-auto mt-1">
-              <svg width="128" height="14" viewBox="0 0 96 12" fill="none">
-                <path
-                  d="M4 8 Q24 2 48 6 Q72 10 92 4"
-                  stroke="#FF6B16"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
+        {/* اللوجو الرسمي بصورة الشخصية الكرتونية الجديدة */}
+        <div className="flex flex-col items-center mb-5">
+          <div className="relative">
+            <Image
+              src="/logo.jpg"
+              alt="فلوسي فين؟"
+              width={170}
+              height={170}
+              className="w-36 h-36 rounded-3xl object-contain drop-shadow-xl border-2 border-white/80"
+              priority
+            />
           </div>
 
           {/* الترحيب بحجم أكبر وأوضح */}
-          <div className="flex items-center gap-2 mt-5 text-[#17221F] font-black text-lg">
+          <div className="flex items-center gap-2 mt-4 text-[#17221F] font-black text-lg">
             <span>مرحباً بك مجدداً</span>
             <span className="text-xl">👋</span>
           </div>

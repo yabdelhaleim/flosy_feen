@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { authApi } from "@/lib/api";
 import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
@@ -81,39 +82,17 @@ export default function RegisterPage() {
 
       {/* ── المحتوى الرئيسي المتمركز ── */}
       <div className="relative z-10 flex flex-col items-center flex-1 justify-center max-w-sm mx-auto w-full">
-        {/* اللوجو بحجم كبير وجريء */}
-        <div className="flex flex-col items-center mb-5">
-          <div className="relative inline-block text-center">
-            {/* الأشعة البرتقالية الـ 3 */}
-            <svg
-              width="40"
-              height="24"
-              viewBox="0 0 36 22"
-              fill="none"
-              className="absolute -top-4 -right-2"
-            >
-              <line x1="6" y1="18" x2="1" y2="6" stroke="#FF6B16" strokeWidth="3.4" strokeLinecap="round" />
-              <line x1="18" y1="19" x2="18" y2="3" stroke="#FF6B16" strokeWidth="3.6" strokeLinecap="round" />
-              <line x1="30" y1="18" x2="35" y2="6" stroke="#FF6B16" strokeWidth="3.4" strokeLinecap="round" />
-            </svg>
-
-            <h1 className="text-5xl font-black text-[#064C3B] tracking-tight leading-none" style={{ letterSpacing: "-1px" }}>
-              فلوسى
-            </h1>
-            <div className="text-5xl font-black text-[#FF6B16] tracking-tight leading-tight -mt-1" style={{ letterSpacing: "-1px" }}>
-              فين؟
-            </div>
-
-            <div className="w-28 mx-auto mt-0.5">
-              <svg width="112" height="12" viewBox="0 0 96 12" fill="none">
-                <path
-                  d="M4 8 Q24 2 48 6 Q72 10 92 4"
-                  stroke="#FF6B16"
-                  strokeWidth="3.8"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </div>
+        {/* اللوجو الرسمي بصورة الشخصية الكرتونية الجديدة */}
+        <div className="flex flex-col items-center mb-4">
+          <div className="relative">
+            <Image
+              src="/logo.jpg"
+              alt="فلوسي فين؟"
+              width={160}
+              height={160}
+              className="w-32 h-32 rounded-3xl object-contain drop-shadow-xl border-2 border-white/80"
+              priority
+            />
           </div>
 
           <p className="mt-3 text-sm font-extrabold text-[#17221F]">
